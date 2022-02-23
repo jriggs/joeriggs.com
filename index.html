@@ -26,253 +26,214 @@
         article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
             display: block;
         }
+
+        ul{
+            list-style-type: none;
+        }
         /*End Reset, begin custom style*/
 
         body {
             font-family: Arial, sans-serif;
-            font-size: .9em;    
+            font-size: .9em;
+            line-height: 1.6;    
         }
 
         #container {
             max-width: 880px;
             margin: auto;
-            text-align: justify;
-            padding: 20px;
+            border:1px solid black;
         }
-
-        h1 {
-            font-size:2.1em
-        }
-
-        h2 {
-            font-size: 1.2em;
-            font-weight:700;
-            padding: .8em 0;
-        }
-
-        h4 {
-            font-weight: 300;
-        }
-
-        h5 {
-            font-weight: 500;
-            text-decoration: underline;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        .career-experience > header > div > div:last-child,
-        #technical-proficiencies>section :first-child ,
-        #jobs  header  >div > p,
-        #additional-experience > p > span,
-        a,
-        a:visited {
-            color: #0F5581;
-        }
-
-        div > header > div {
-           padding: 1.2em 0 0 0;
-        }
-
-        p, li {
-            line-height: 1.4em;
-        }
-
-        header > div > p {
-            text-align: right;
-        }
-
-        header,
-        #technical-proficiencies>section {
+        /* layout */
+        main {
             display: flex;
         }
 
-        #technical-proficiencies>section {
-            padding: .3em 0;
+        main > section {
+            padding: 0 30px 0 0;
         }
 
-        .center {
-            flex: auto;
+        section:first-child{
+            width: 30%;
+        }
+        section:last-child{
+            width: 70%;
+        }
+        /*end layout */
+
+        h1 {
+            font-size: 1.5em;
+            font-weight: 800;
+        }
+        h2 {
+            font-size: 1.3em;
+            color: rgb(100, 99, 99);
+            padding: 0 0 10px 0;
         }
 
-        #technical-proficiencies>section :first-child {
-            flex: .5 1 0;
+        h3 >span {
+            color: rgb(100, 99, 99);
         }
 
-        #technical-proficiencies>section :last-child {
-            flex: 2 1 0;
+        h4{
+            font-weight: 200;    
         }
 
-        .hidden {
-            color: white;
-            font-size: .01em;
+        p {
+            padding: 0 0 0 0;
+        }
+
+        section:first-child > span{
             display: block;
-            height: 0px;
-        }
-       
-        header > div > h2 {
-            padding: 0;
+            padding: 20px 0 0 0;
         }
 
-        #jobs  header > div > p,
-        #additional-experience >p > span, 
-        #technical-proficiencies > section :first-child {
+        .contact > p {
             font-weight: 700;
-        }
-
-        #jobs > ul:last-child {
-            margin-bottom: 0;
-        }
-
-        ul {
-            margin: .6em 0 1.2em 3em;
         }
 
     </style>
 </head>
 
 <body>
-    <div id="container">
-        <header>
-            <div>
-                <h1>Joe Riggs</h1>
-            </div>
-            <div class="center"></div>
-            <div>
-                <p>
-                    <a href="https://github.com/jriggs" target="_blank" rel="noopener noreferrer">Github</a>
-                     &bull; 
-                     <a href="https://www.linkedin.com/in/joeriggs/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    &bull; 
-                    <a href="mailto:josephariggs@gmail.com" target="_blank" rel="noopener noreferrer"> Email </a></p>
-                <p>Cincinnati, OH</p>
-            </div>
-        </header>
-        <main>
+<div id="container">
+    <header>
+        <h1>
+            Joe Riggs
+        </h1>
+    </header>
+    <main>  
+        <section>
             <p>
-                <span class="hidden">Summary</span>
-                Technologist with a proven track record delivering modern software solutions. Team player adept at facilitating groups and spanning multiple roles across the SDLC. Passion for optimization. Public speaker, mentor, advocate, music aficionado.
+                12 years of experience in software engineering. Currently lead instructor at Tech Elevator, where I mentor and guide students through their journey into technology careers.
             </p>
-
-            <h2>Technical Proficiencies</h2>
-            <span id="technical-proficiencies">
-                <section>
-                    <div>Platforms:</div>
-                    <div>AWS, Azure, Firebase, Netlify</div>
-                </section>
-                <section>
-                    <div>Languages:</div>
-                    <div>C#/.NET Core, JAVA, PHP, Python, JavaScript - Node/Vue.js/Angular</div>
-                </section>
+            <span class = "contact">
+                <p>
+                    josephariggs@gmail.com
+                </p>
+                <p>
+                    859-468-5694
+                </p>
             </span>
-
-            <h2>Career Experience</h2>
-            <span id="jobs">
-
-                <header>
-                    <div>
-                        <h3>Tech Elevator, Cincinnati, OH</h3>
-                        <h4>Instructor</h4>
-                    </div>
-                    <div class="center"></div>
-                    <div>
-                        <p>Jan 2020 - present</p>
-                    </div>
-                </header>
-                <p>Deliver personalized instruction on full-stack software development with Java and C#.NET. 
-                Offer one-on-one support to students and contribute to career guidance sessions. Mentor and technically 
-                upskill students.</p>
+            <span class = "skills">
+                <h2>
+                    Skills
+                </h2>
                 <ul>
-                    <li>
-                        Coached and enabled 100+ students to transition into technology.
-                    </li>
-                    <li>
-                        Played a lead role in the development of curriculum in line with national curriculum strategy.
-                    </li>
-                </ul>
-
-                <header>
-                    <div>
-                        <h3>LISNR Inc., Cincinnati, OH</h3>
-                        <h4>Implementation Engineer</h4>
-                    </div>
-                    <div class="center"></div>
-                    <div>
-                        <p>Jul 2019 - Jan 2020</p>
-                    </div>
-                </header>
-                <p>Supervised execution and operation support of SDK and platform. Coordinated with customers to accomplish business outcomes and remove roadblocks. Developed and prototyped proof-of-concepts applications for iOS, android, raspberry Pi and desktop platforms.</p>
-                <ul>
-                    <li>
-                        Minimized checkout time by 1-2 minutes per customer by optimizing workflow and authenticating
-                        customers before checkout.
-                    </li>
-                    <li>
-                        Partnered with a credit company&#39;s innovation lab to create an MVP for touchless payments
-                    </li>
-                </ul>
-
-                <header>
-                    <div>
-                        <h3>Health Carousel, Cincinnati, OH</h3>
-                        <h4>Enterprise CRM Developer</h4>
-                    </div>
-                    <div class="center"></div>
-                    <div>
-                        <p>Feb 2018 - Jul 2019</p>
-                    </div>
-                </header>
-                <p>Monitored workflows, coding, and deployment of software solutions for recruiting platforms. Designed new applications, web services, modules, and customer plugins.</p>
-                <ul>
-                    <li>
-                        Reduced process time by 1-2 hours per person by streamlining registration process.
-                    </li>
-                    <li>
-                        Minimized bugs and enhanced flexible deployments by executing continuous integration process for applications.
-                    </li>
-                </ul>
-
-                <header>
-                    <div>
-                        <h3>Public Library of Cincinnati, OH</h3>
-                        <h4>Team Lead/Systems Developer</h4>
-                    </div>
-                    <div class="center"></div>
-                    <div>
-                        <p>Feb 2016 – Feb 2018</p>
-                    </div>
-                </header>
-                <p>Designed internal web tools for intranet and extranet users. Assessed and resolved technical issues in coordination with vendors. Created ETL tools for reporting and analytics. Supervised duties of junior team and trained on technical product development.</p>
-                <ul>
-                    <li>
-                        Developed interactive checkout kiosk providing self-service capability to patrons.
-                    </li>
-                    <li>
-                        Decreased page load times by 1-2 seconds and optimized website used by 500K users/month.
-                    </li>
-                </ul>
-
+                <li>Public speaking
+                    <li>Student education</li>
+                    <li>Software architecture</li>
+                    <li>Systems analysis</li>
+                    <li>Build processes</li>
+                    <li>Testing</li>
+            </ul>
             </span>
-
-            <h2>Additional Experience</h2>
-            <span id="additional-experience">
-                <p><span>Senior Consultant,</span> (Jun 2015 - Jan 2016) Convergys - Consultant via CBTS, Cincinnati, OH</p>
-                <p><span>Senior Developer/Product Owner,</span> (Mar 2012 – May 2015) Knowledge Works Foundation, Cincinnati, OH</p>
-                <p><span>Application Developer,</span>(Apr 2007 - Feb 2012) Beltronics / Escort Inc., Cincinnati, OH</p>
-                <p><span>Instructor,</span> for Amazon's Tech Training Class, Hebron, KY</p>
-                <p><span>Tutor,</span> Cincinnati Public Schools</p>
+            <span class = "tools">
+                <h2>
+                Tools
+                </h2>
+                
+                <h3>
+                    Software
+                </h3>
+                <p>
+                C# .NET Core, Java, PHP, Python.
+                </p>
+                <h3>
+                    Databases
+                </h3>
+                <p>
+                Oracle, MySQL, MSSQL, MongoDB.
+                </p>
+                <h3>
+                Platforms
+                </h3>
+                <p>
+                AWS, Azure, Firebase, Netlify.
+                </p>
             </span>
-
-            <h2>Education</h2>
-            <span id="education">
-                <p>Bachelor of Science in Information Systems, Minor Business Administration</p>
-                <p>Northern Kentucky University, Highland Heights, KY</p>
+            <span class = "education"> 
+                <h2>
+                    Education
+                </h2>
+                <p>
+                Northern Kentucky University 
+                BS in Information Systems
+                </p>
+                <p>
+                    Minor Business Administration
+                </p>
+                <p> 
+                    Amazon • AWS Cloud Practitioner
+                </p>
             </span>
+        </section>
+        <section>
+            <span class = "experience">
+                <div>
+                    <h2>
+                        Experience
+                    </h2>
 
-        </main>
-    </div>
+                    <h3>
+                        Tech Elevator <span>&bull; Lead Instructor</span>
+                    </h3>
+                    <h4>
+                        January 2020 - Present
+                    </h4>
+                    <p>
+                        Delivered personalized instruction on full-stack software development with Java and C#.NET. Coached and enabled 100+ students. Lead the development of remote curriculum in line with in-person curriculum.
+                    </p>
+                </div>
+                <div>
+                    <h3>
+                        LISNR Inc. <span> &bull; Software Engineer, Infrastructure</span>
+                    </h3>
+                    <h4>
+                        July 2019 - January 2020 
+                    </h4>
+                    <p>
+                        Supervised execution and operational support of SDK and platform. Partnered with a FinTech’s innovation lab to create an MVP for touchless payments. Minimized checkout time by half per customer by optimizing workflow and authentication process. 
+                    </p>
+                </div>
+                <div>
+                    <h3>
+                        Health Carousel <span>&bull; Enterprise CRM Developer</span>
+                    </h3>
+                    <h4>
+                        February 2018 - July 2019
+                    </h4>
+                    <p>
+                        Monitored workflows, coding, and deployment of software solutions  for recruiting platforms. Reduced process time by 1-2 hours per client by streamlining registration process. Implemented continuous integration strategy for enhanced deployments.
+                    </p>
+                </div>
+                <div>
+                    <h3>
+                        Cincinnati Public Library <span>&bull; Lead Systems Developer</span>
+                    </h3>
+                    <h4>
+                        February 2018 - July2019
+                    </h4>
+                    <p>
+                        Designed internal web tools for intranet and extranet users. Created ETL tools for reporting and analytics. Implemented training for technical product development. Decreased page load times by 1-2 seconds and optimized website with 50K DAU.  
+                    </p>
+                </div>
+                <div>
+                    <h3>
+                        KnowledgeWorks Foundation <span>&bull; Senior Software Developer</span>
+                    </h3>
+                    <h4>
+                        March 2012 - February 2016
+                    </h4>
+                    <p>
+                        Led CMS design to allow under-served communities maintain a web presence and report on their benchmarks. Developed, scaled and deployed high volume LMS system serving 150k+ students. Collected and analyzed data for 1000 tutor volunteers.
+                    </p>
+                </div>
+            </span>
+        </section>
+    </main>
+</div>
+
+        
 </body>
 
 </html>
