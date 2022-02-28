@@ -41,7 +41,7 @@
             text-rendering: optimizeLegibility;  
         }
 
-        #container {
+       body > div:nth-child(1) {
             max-width: 860px;
             margin: auto;
            
@@ -60,10 +60,11 @@
             padding: 0 30px 0 0;
         }
 
-        section:first-child{
+        section:first-child {
             width: 40%;
         }
-        section:last-child{
+
+        section:last-child {
             width: 60%;
         }
         /*end layout */
@@ -73,6 +74,7 @@
             font-weight: 800;
             border-bottom:1px solid black;
         }
+
         h2 {
             font-size: 1.3em;
             color: rgb(100, 99, 99);
@@ -83,12 +85,16 @@
             color: rgb(100, 99, 99);
         }
 
-        h3{
+        h3 {
             padding-top: 15px;
         }
 
-        h4{
+        h4 {
             font-weight: 200;    
+        }
+        a, a:hover, a:focus, a:active {
+            text-decoration: none;
+            color: inherit;
         }
 
         p {
@@ -96,7 +102,7 @@
             word-wrap: break-word;
         }
 
-        section:first-child > span{
+        section:first-child > span {
             display: block;
             padding: 20px 0 0 0;
         }
@@ -110,23 +116,23 @@
             padding-top: 0;
         }
 
-        .contact > p {
-            font-weight: 700;
-        }
-
         span > p > span {
             font-weight: 700;
         }
 
         @media screen and (max-width: 640px){
-            main{
+            main {
                 flex-direction: column;
             }
-            section:first-child{
+            section:first-child {
                 width: 90%;
             }
-            section:last-child{
+            section:last-child {
                 width: 90%;
+            }
+
+            section:nth-child(2) > span > div:nth-child(1) > h2 {
+                padding-top: 20px;
             }
         }
 
@@ -134,7 +140,7 @@
 </head>
 
 <body>
-    <div id="container">
+    <div>
         <header>
             <h1>
                 Joe Riggs
@@ -150,10 +156,10 @@
                         josephariggs@gmail.com
                     </p>
                     <p>
-                        859-468-5694
+                        <a href="https://linkedin.com/in/joeriggs/">linkedin.com/in/joeriggs/</a>
                     </p>
                     <p>
-                        joe-riggs.com
+                        <a href="https://joe-riggs.com/blog">joe-riggs.com/blog</a>
                     </p>
                 </span>
                 <span>
@@ -171,7 +177,7 @@
                 </span>
                 <span>
                     <h2>
-                    Tools
+                        Tools
                     </h2>
                     
                     <h3>
