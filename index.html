@@ -19,266 +19,329 @@
             background: transparent;
         }
 
-        body {
-            line-height: 1;
-        }
-
         article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
             display: block;
         }
 
-        ul{
-            list-style-type: none;
-        }
         /*End Reset, begin custom style*/
 
         /* layout */
         body {
             font-family: 'Segoe UI','SegoeUI','Helvetica Neue',Helvetica,Arial,sans-serif;
-            font-size: .9em;
-            line-height: 1.5; 
+            font-size: .82em;
+            line-height: 1.3; 
             -webkit-font-smoothing: antialiased;
-            text-rendering: optimizeLegibility;  
+            text-rendering: optimizeLegibility; 
+            max-width: 60em;
+            margin: auto; 
+            padding:1em
         }
 
-       body > div:nth-child(1) {
-            max-width: 860px;
-            margin: auto;
-           
-        }
-        /* layout */
-        main {
+        body > header,
+        body > main,
+        aside > section > article {
             display: flex;
+            justify-content: space-between;
         }
 
-        main,
-        header {
-            padding: 5px 20px;
-        }
-
+        header > section,
         main > section {
-            padding: 0 30px 0 0;
+            width: 69%;
+            padding: 0 2.5em 0 0;
         }
 
-        section:first-child {
-            width: 40%;
+        header > aside,
+        main > aside {
+            width: 31%;
         }
-
-        section:last-child {
-            width: 60%;
-        }
-        /*end layout */
 
         h1 {
-            font-size: 1.5em;
-            font-weight: 800;
-            border-bottom:1px solid black;
+            font-size: 3em;
         }
 
         h2 {
-            font-size: 1.3em;
-            color: rgb(100, 99, 99);
-            padding: 0 0 10px 0;
+            padding: 1.6em 0 0 0;
+            color: #2079c7
         }
 
-        h3 > span {
-            color: rgb(100, 99, 99);
-        }
-
-        h3 {
-            padding-top: 15px;
-        }
-
-        h4 {
-            font-weight: 200;    
-        }
         a, a:hover, a:focus, a:active {
             text-decoration: none;
             color: inherit;
+            font-weight: 500;
         }
 
-        p {
-            padding: 0 0 0 0;
-            word-wrap: break-word;
+        header > aside > ul {
+            list-style-type: none;
         }
 
-        section:first-child > span {
-            display: block;
-            padding: 20px 0 0 0;
+        section > h3 > span {
+            font-weight: 400;
         }
 
-        section:first-child > span:nth-child(2) {
-            font-weight: bold;
-        } 
-
-        section:last-child > span > div:first-child > h3,
-        section:nth-child(1) > span:nth-child(4) > h3:nth-child(2) {
-            padding-top: 0;
+        section > h3 > span:nth-child(2) {
+            font-style: italic;
         }
 
-        span > p > span {
-            font-weight: 700;
+        aside > p:nth-child(2),
+        aside > section,
+        h3 {
+            padding: 1em 0 0 0;
         }
 
-        @media screen and (max-width: 640px){
-            main {
-                flex-direction: column;
+        main > section > p > span {
+            font-size: .8rem;
+        }
+
+        main > section > p {
+            padding: 0 0 0.8rem 0;
+            line-height: 1em;
+        }
+
+        main > section > ul {
+            padding: 0 0 0 1.2em;
+        }
+
+        article {
+            max-width: 18em;
+        }
+
+        @media screen and (max-width: 40em) {
+           body {
+               padding: .5em;
+           }
+            body > main {
+                flex-direction: column-reverse;
             }
-            section:first-child {
-                width: 90%;
+            main > section,
+            main > aside,
+            header > aside,
+            header> section {
+                width: inherit; 
             }
-            section:last-child {
-                width: 90%;
+            aside > section > article {
+                max-width: 34em;
+                width: inheret;
             }
-
-            section:nth-child(2) > span > div:nth-child(1) > h2 {
-                padding-top: 20px;
+            main > section {
+                padding:0;
             }
         }
-
     </style>
 </head>
 
 <body>
-    <div>
-        <header>
-            <h1>
-                Joe Riggs
-            </h1>
-        </header>
-        <main>  
-            <section>
-                <p>
-                    12 years of experience in software engineering. Currently lead instructor at Tech Elevator where I mentor and guide students through their journey into technology careers.
-                </p>
-                <span>
-                    <p>
-                        josephariggs@gmail.com
-                    </p>
-                    <p>
-                        <a href="https://linkedin.com/in/joeriggs/">linkedin.com/in/joeriggs/</a>
-                    </p>
-                    <p>
-                        <a href="https://joe-riggs.com/blog">joe-riggs.com/blog</a>
-                    </p>
-                </span>
-                <span>
-                    <h2>
-                        Skills
-                    </h2>
-                    <ul>
-                    <li>Public speaking
-                        <li>Student education</li>
-                        <li>Software architecture</li>
-                        <li>Systems analysis</li>
-                        <li>Build processes</li>
-                        <li>Testing</li>
-                </ul>
-                </span>
-                <span>
-                    <h2>
-                        Tools
-                    </h2>
-                    
-                    <h3>
-                        Software
-                    </h3>
-                    <p>
-                    C# .NET Core, JavaScript, PHP, JAVA
-                    </p>
-                    <h3>
-                        Databases
-                    </h3>
-                    <p>
-                    PostgreSQL, MySQL, MSSQL, MongoDB
-                    </p>
-                    <h3>
-                    Platforms
-                    </h3>
-                    <p>
-                    AWS, Azure, Firebase, Netlify
-                    </p>
-                </span>
-                <span> 
-                    <h2>
-                        Education
-                    </h2>
-                    <p>
-                    <span>Northern Kentucky University</span>
-                    <br> 
-                    BS Information Systems
-                    </p>
-                    <p>
-                        Minor Business Administration
-                    </p>
-                    <p> 
-                        <span>Amazon</span> AWS Cloud Practitioner
-                    </p>
-                </span>
-            </section>
-            <section>
-                <span>
-                    <div>
-                        <h2>
-                            Experience
-                        </h2>
+    <header>
+        <section>
+            <h1>Joe Riggs</h1>
+            <p>Software Engineer &dash; Mentor &dash; Public Speaker</p>
+        </section>
+        <aside>
+            <ul>
+                <li>
+                    Cincinnati, OH
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/joeriggs/">linkedin.com/in/joeriggs/</a>
+                </li>
+                <li>
+                    <a href="https://joe-riggs.com/blog/">joe-riggs.com/blog/</a>
+                </li>
+                <li>
+                    <a href="mailto:josephariggs@gmail.com">josephariggs@gmail.com</a>
+                </li>
+            </ul>
+        </aside>
+    </header>
+    <main>
+        <section>
+            <h2>
+                WORK EXPERIENCE
+            </h2>
+            <h3>
+                Tech Elevator,<span> Cincinnati OH —</span> <span>Instructor</span>
+            </h3>
+            <p>
+                <span> January 2020 &mdash; Present </span>
+            </p>
+            <p>
+                Accredited top-ranked full stack coding bootcamp.
+            </p>
+            <ul>
+                <li>
+                    Delivered personalized instruction on full-stack software development with Java and C#.NET, MSSQL Server, API&apos;s, HTML/CSS and Vue.js.
+                </li>
+                <li>
+                    Led the creation of remote curriculum in line with in-person course work.
+                </li>
+                <li>
+                    Interview, onboard and train instruction staff.
+                </li>
+            </ul>
 
-                        <h3>
-                            Tech Elevator <span>&bull; Lead Instructor</span>
-                        </h3>
-                        <h4>
-                            January 2020 - Present
-                        </h4>
-                        <p>
-                            Delivered personalized instruction on full-stack software development with Java and C#.NET. Coached and enabled 100+ students. Lead the development of remote curriculum in line with in-person curriculum.
-                        </p>
-                    </div>
-                    <div>
-                        <h3>
-                            LISNR Inc. <span> &bull; Software Engineer, Infrastructure</span>
-                        </h3>
-                        <h4>
-                            July 2019 - January 2020 
-                        </h4>
-                        <p>
-                            Supervised execution and operational support of SDK and platform. Partnered with a FinTech’s innovation lab to create an MVP for touchless payments. Minimized checkout time by half per customer by optimizing workflow and authentication process.  </p>
-                    </div>
-                    <div>
-                        <h3>
-                            Health Carousel <span>&bull; CRM Architect</span>
-                        </h3>
-                        <h4>
-                            February 2018 - July 2019
-                        </h4>
-                        <p>
-                            Monitored workflows, coding, and deployment of software solutions for recruiting platforms. Reduced process time by 1-2 hours per client by streamlining registration process. Architected continuous integration strategy for enhanced deployments. 
-                        </p>
-                    </div>
-                    <div>
-                        <h3>
-                            Cincinnati Public Library <span>&bull; Lead Systems Developer</span>
-                        </h3>
-                        <h4>
-                            February 2018 - July2019
-                        </h4>
-                        <p>
-                            Designed internal web tools for intranet and extranet users. Created ETL tools for reporting and analytics. Implemented training for technical product development. Decreased page load times by 1-2 seconds and optimized website with 50K DAU.  
-                        </p>
-                    </div>
-                    <div>
-                        <h3>
-                            KnowledgeWorks Foundation <span>&bull; Senior Software Developer</span>
-                        </h3>
-                        <h4>
-                            March 2012 - February 2016
-                        </h4>
-                        <p>
-                            Led CMS design to allow under-served communities maintain a web presence and report on their benchmarks. Developed, scaled and deployed high volume LMS serving 150k+ students. Collected and analyzed data for 1000 tutor volunteers.
-                        </p>
-                    </div>
-                </span>
+            <h3>
+                LISNR,<span> Cincinnati OH —</span> <span>Infrasctructure Engineer</span>
+            </h3>
+            <p>
+                <span> July 2019 &mdash; January 2020</span>
+            </p>
+            <p>
+                VC backed startup based out of Oakland CA specializing in audio data transfer.
+            </p>
+            <ul>
+                <li>
+                    Partnered with a FinTech innovation lab to create an MVP for secure touchless payments.
+                </li>
+                <li>
+                    Minimized a major European retailer&apos;s checkout time by half per customer by optimizing checkout workflow and authentication process.
+                </li>
+            </ul>
+
+            <h3>
+                Health Carousel,<span> Cincinnati OH —</span> <span>CRM Architect</span>
+            </h3>
+            <p>
+                <span>February 2018 &mdash; July 2019</span>
+            </p>
+            <p>
+                Multi-national award winning  healthcare staffing agency.
+            </p>
+            <ul>
+                <li>
+                    Reduced process time by 1-2 hours per client by streamlining the applicant's registration process.
+                </li>
+                <li>
+                    Architected continuous integration strategy for enhanced deployments.
+                </li>
+                <li>
+                    Created analytics dashboard and reporting application.
+                </li>
+            </ul>
+            <h3>
+                Cincinnati Public Library — <span>Team Lead</span>
+            </h3>
+            <p>
+                <span>February 2018 &mdash; July 2019</span>
+            </p>
+            <p>
+                USA&apos;s 4th largest library system serving 2.5 million patrons annually.
+            </p>
+            <ul>
+                <li>
+                    Created documentation and implemented training best practices for technical product development.
+                </li>
+                <li>
+                    Decreased page load times by 1-2 seconds and optimized website with 50K DAU while modernizing tech stack.
+                </li>
+                <li>
+                    Designed internal web applications for intranet and extranet users, including ETL tools for reporting and analytics.
+                </li>
+            </ul>
+            <h3>
+                KnowledgeWorks — <span>Cincinnati OH </span><span>Team Lead</span>
+            </h3>
+            <p>
+                <span>March 2012 &mdash; February 2018</span>
+            </p>
+            <p>
+                Non-profit organization specializing in education policy and systems.
+            </p>
+            <ul>
+                <li>
+                    Led CMS design and implementation allowing under-served communities to maintain a web presence and report on their benchmarks.
+                </li>
+                <li>
+                    Developed, scaled and deployed high volume LMS serving 150k+ students.
+                </li>
+                <li>
+                    Collected and analyzed data for 1000 tutor volunteers.
+                </li>
+            </ul>
+        </section>
+        <aside>
+            <h2>
+                SUMMARY
+            </h2>
+            <p>
+                Seasoned technologist with a passion for optimization. Advocate for leveraging technology towards  the greater good at scale. Team player with hands-on experience across the SDLC. Lifelong learner with a growth mentality mindset.
+            </p>
+
+            <h2>
+                LANGUAGES &amp; FRAMEWORKS
+            </h2>
+            <section>
+                <article>
+                    <p>Javascript</p><span>Expert | 8 years</span>
+                </article>
+                <article>
+                    <p>C# .NET</p><span>Expert | 8 years</span>
+                </article>
+                <article>
+                    <p>SQL</p><span>Expert | 8 years</span>
+                </article>
+                <article>
+                    <p>REST API&apos;s</p><span>Expert | 8 years</span>
+                </article>
+                <article>
+                    <p>Agile</p><span>Expert | 6 years</span>
+                </article>
+                <article>
+                    <p>Java</p><span>Advanced | 5 years</span>
+                </article>
+                <article>
+                    <p>Vue.js</p><span>Advanced | 5 years</span>
+                </article>
+                <article>
+                    <p>React JS</p><span>Intermediate | 2 years</span>
+                </article>
             </section>
-        </main>
-    </div>       
+            <h2>
+                PLATFORMS
+            </h2>
+            <h3>
+                AWS
+            </h3>
+            <p>
+                S3, EC2, Route 53, RDS
+            </p>
+            <h3>
+                Azure
+            </h3>
+            <p>
+                CI/CD Pipelines, Functions, App Services
+            </p>
+
+            <h2>
+                EDUCATION
+            </h2>
+            <h3>
+                Northern Kentucky  University
+            </h3>
+            <p>
+                BSc. Computer Science 
+            </p>
+            <p>
+                Minor, Business Administration
+            </p>
+            <h3>
+                Amazon
+            </h3>
+            <p>Cloud Practitioner</p>
+
+            <h2>ADDITIONAL EXPERIENCE</h2>
+            <h3>
+                Instructor
+            </h3>
+            <p>
+                Amazon Technical Training
+            </p>
+            <h3>
+                Volunteer Tutor
+            </h3>
+            <p>
+                Cincinnati Public Schools
+            </p>
+        </aside>
+    </main>
+    
 </body>
 </html>
