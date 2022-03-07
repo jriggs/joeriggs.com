@@ -28,29 +28,28 @@
         /* layout */
         body {
             font-family: 'Segoe UI','SegoeUI','Helvetica Neue',Helvetica,Arial,sans-serif;
-            font-size: .82em;
+            font-size: .825em;
             line-height: 1.3; 
             -webkit-font-smoothing: antialiased;
             text-rendering: optimizeLegibility; 
             max-width: 60em;
             margin: auto; 
-            padding:1em
+            padding: 1em
         }
 
-        body > header,
+        /*body > header,*/
         body > main,
         aside > section > article {
             display: flex;
             justify-content: space-between;
         }
 
-        header > section,
+        /*header > section,*/
         main > section {
             width: 69%;
             padding: 0 2.5em 0 0;
         }
 
-        header > aside,
         main > aside {
             width: 31%;
         }
@@ -67,10 +66,10 @@
         a, a:hover, a:focus, a:active {
             text-decoration: none;
             color: inherit;
-            font-weight: 500;
+            font-weight: 400;
         }
 
-        header > aside > ul {
+        nav > ul {
             list-style-type: none;
         }
 
@@ -84,16 +83,17 @@
 
         aside > p:nth-child(2),
         aside > section,
+        nav > ul,
         h3 {
             padding: 1em 0 0 0;
         }
 
         main > section > p > span {
-            font-size: .8rem;
+            font-size: .9em;
         }
 
         main > section > p {
-            padding: 0 0 0.8rem 0;
+            padding: 0 0 0.8em 0;
             line-height: 1em;
         }
 
@@ -108,20 +108,24 @@
         @media screen and (max-width: 40em) {
            body {
                padding: .5em;
-           }
+            }
+
             body > main {
                 flex-direction: column-reverse;
             }
+
             main > section,
             main > aside,
             header > aside,
             header> section {
                 width: inherit; 
             }
+
             aside > section > article {
-                max-width: 34em;
-                width: inheret;
+                max-width: 32em;
+                width: inherit;
             }
+
             main > section {
                 padding:0;
             }
@@ -133,24 +137,9 @@
     <header>
         <section>
             <h1>Joe Riggs</h1>
-            <p>Software Engineer &dash; Mentor &dash; Public Speaker</p>
+            <p>Technologist based out of Cincinnati OH with a proven track record delivering modern software solutions. Team player adept at facilitating groups and spanning multiple roles across the SDLC. Passion for optimization. Public speaker, mentor, advocate, music aficionado.</p>
         </section>
-        <aside>
-            <ul>
-                <li>
-                    Cincinnati, OH
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/joeriggs/">linkedin.com/in/joeriggs/</a>
-                </li>
-                <li>
-                    <a href="https://joe-riggs.com/blog/">joe-riggs.com/blog/</a>
-                </li>
-                <li>
-                    <a href="mailto:josephariggs@gmail.com">josephariggs@gmail.com</a>
-                </li>
-            </ul>
-        </aside>
+
     </header>
     <main>
         <section>
@@ -158,7 +147,7 @@
                 WORK EXPERIENCE
             </h2>
             <h3>
-                Tech Elevator,<span> Cincinnati OH —</span> <span>Lead Instructor</span>
+                Tech Elevator,<span> Cincinnati OH | </span> <span>Lead Instructor</span>
             </h3>
             <p>
                 <span> January 2020 &mdash; Present </span>
@@ -179,7 +168,7 @@
             </ul>
 
             <h3>
-                LISNR,<span> Cincinnati OH —</span> <span>Infrasctructure Engineer</span>
+                LISNR,<span> Cincinnati OH | </span> <span>Infrasctructure Engineer</span>
             </h3>
             <p>
                 <span> July 2019 &mdash; January 2020</span>
@@ -197,7 +186,7 @@
             </ul>
 
             <h3>
-                Health Carousel,<span> Cincinnati OH —</span> <span>CRM Architect</span>
+                Health Carousel,<span> Cincinnati OH | </span> <span>CRM Architect</span>
             </h3>
             <p>
                 <span>February 2018 &mdash; July 2019</span>
@@ -217,7 +206,7 @@
                 </li>
             </ul>
             <h3>
-                Cincinnati Public Library — <span>Team Lead</span>
+                Cincinnati Public Library <span> | Team Lead</span>
             </h3>
             <p>
                 <span>February 2018 &mdash; July 2019</span>
@@ -237,7 +226,7 @@
                 </li>
             </ul>
             <h3>
-                KnowledgeWorks — <span>Cincinnati OH </span><span>Senior Software Engineer</span>
+                KnowledgeWorks, <span>Cincinnati OH | </span><span>Senior Software Engineer</span>
             </h3>
             <p>
                 <span>March 2012 &mdash; February 2018</span>
@@ -259,11 +248,24 @@
         </section>
         <aside>
             <h2>
-                SUMMARY
+                CONTACT
             </h2>
-            <p>
-                Seasoned technologist with a passion for optimization. Advocate for leveraging technology towards  the greater good at scale. Team player with hands-on experience across the SDLC. Lifelong learner with a growth mentality mindset.
-            </p>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="https://www.linkedin.com/in/joeriggs/">linkedin.com/in/joeriggs/</a>
+                    </li>
+                    <li>
+                        <a href="https://joe-riggs.com/blog/">joe-riggs.com/blog/</a>
+                    </li>
+                    <li>
+                        <a href="mailto:josephariggs@gmail.com">josephariggs@gmail.com</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/jriggs">github.com/jriggs</a>
+                    </li>
+                </ul>
+            </nav>
             <h2>
                 LANGUAGES &amp; FRAMEWORKS
             </h2>
@@ -284,6 +286,9 @@
                     <p>Agile</p><span>Expert | 6 years</span>
                 </article>
                 <article>
+                    <p>PHP</p><span>Advanced | 6 years</span>
+                </article>
+                <article>
                     <p>Java</p><span>Advanced | 5 years</span>
                 </article>
                 <article>
@@ -300,7 +305,7 @@
                 AWS
             </h3>
             <p>
-                S3, EC2, Route 53, RDS
+                S3, EC2, Route 53, RDS, ELB
             </p>
             <h3>
                 Azure
@@ -342,5 +347,15 @@
         </aside>
     </main>
     
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-9604009-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-9604009-1');
+</script>
+
 </body>
 </html>
